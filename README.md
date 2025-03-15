@@ -3,15 +3,15 @@
 # Patch Management and Vulnerability Remediation using WSUS
 
 ## Introduction
-In this project, students will learn the basics of patch management and vulnerability remediation using WSUS (Windows Server Update Services). WSUS allows administrators to manage the distribution of updates released through Microsoft Update to computers in a corporate environment. By the end of this project, students will be able to set up WSUS, configure client machines, approve and deploy updates, and verify the update status.
+In this project, we will learn the basics of patch management and vulnerability remediation using WSUS (Windows Server Update Services). WSUS allows administrators to manage the distribution of updates released through Microsoft Update to computers in a corporate environment. By the end of this project, we will be able to set up WSUS, configure client machines, approve and deploy updates, and verify the update status.
 
 ## Pre-requisites
 - Basic understanding of Windows Server and client management
-- A Windows Server 2016 or later machine
+- A Windows Server 2022 or later machine
 - Windows client machines (e.g., Windows 10) for testing
 
 ## Lab Set-up and Tools
-- Windows Server 2016 or later with WSUS role installed
+- Windows Server 2022 or later with WSUS role installed
 - Windows client machines
 - Active Directory for domain-joined machines (optional but recommended)
 
