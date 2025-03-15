@@ -1,5 +1,3 @@
-# Patching-with-WSUS
-
 # Patch Management and Vulnerability Remediation using WSUS
 
 ## Introduction
