@@ -1,91 +1,91 @@
 # Patch Management and Vulnerability Remediation using WSUS
 
-## Introduction
-In this project, we will learn the basics of patch management and vulnerability remediation using WSUS (Windows Server Update Services). WSUS allows administrators to manage the distribution of updates released through Microsoft Update to computers in a corporate environment. By the end of this project, we will be able to set up WSUS, configure client machines, approve and deploy updates, and verify the update status.
+## Intro
+This project focuses on learning the fundamentals of patch management and vulnerability remediation using Windows Server Update Services (WSUS). WSUS enables administrators to centrally manage the distribution of Microsoft updates across a corporate network. By the end of this project, we will have the skills to deploy WSUS, configure client systems, approve and distribute updates, and monitor update status.
 
-## Pre-requisites
-- Basic understanding of Windows Server and client management
-- A Windows Server 2022 or later machine
-- Windows client machines (e.g., Windows 10) for testing
-
-## Lab Set-up and Tools
+## Prerequisites
+- Basic knowledge of Windows Server and client management
+- A Windows Server 2016 or later system. In this project, I use the 2022 server
+- Windows client devices (Windows 10) for testing purposes
+## Lab Environment and Tools
 - Windows Server 2022 or later with WSUS role installed
 - Windows client machines
 - Active Directory for domain-joined machines (optional but recommended)
 
-## Exercises
+## Tasks
 
-### Exercise 1: Installing and Configuring WSUS
+### Task 1: Installing and Configuring WSUS
 
 **Steps:**
 
-1. Open Server Manager on your Windows Server machine.
-2. Click on "Manage" > "Add Roles and Features".
-3. Follow the wizard to add the WSUS role:
+1. Open Server Manager on the Windows Server.
+2. Click "Manage" > "Add Roles and Features".
+3. Follow the installation wizard to add the WSUS role:
     - Select "Windows Server Update Services".
     - Choose the required services and proceed with the installation.
-4. After installation, launch the WSUS Configuration Wizard:
+4. Once installed, launch the WSUS Configuration Wizard:
     - Configure the update source.
     - Choose the classifications and products you want to update.
     - Set up synchronization schedule.
-    - Complete the wizard to finish configuration.
+    - Complete the wizard to finalize the setup..
 
-**Expected Output:**
-- WSUS is installed and configured with the initial setup complete.
+**Result:**
+- WSUS is installed and configured with initial settings applied
 
-### Exercise 2: Configuring Group Policies for WSUS
+### Task 2: Configuring Group Policies for WSUS
 
 **Steps:**
 
-1. Open the Group Policy Management Console (GPMC) on your Windows Server.
-2. Create a new Group Policy Object (GPO) or edit an existing one.
+1. Open the Group Policy Management Console (GPMC) on the Windows Server.
+2. Create a new Group Policy Object (GPO) or modify an existing one.
 3. Navigate to "Computer Configuration" > "Policies" > "Administrative Templates" > "Windows Components" > "Windows Update".
 4. Configure the following policies:
     - "Specify Intranet Microsoft update service location": Set it to the WSUS server URL (e.g., `http://wsusserver`).
     - "Configure Automatic Updates": Set it to auto-download and schedule the install.
-5. Link the GPO to the desired organizational unit (OU) containing the client machines.
+5. Link the GPO to the organizational unit (OU) containing the target client machines.
 
-**Expected Output:**
-- Group Policies are configured to direct client machines to use the WSUS server for updates.
+**Result:**
+- Group policies are configured to direct client devices to use the WSUS server for updates.
 
-### Exercise 3: Approving and Deploying Updates
+### Task 3: Approving and Deploying Updates
 
 **Steps:**
 
-1. Open the WSUS console on your Windows Server.
+1. Open the WSUS management console on the server.
 2. Navigate to "Updates" > "All Updates".
-3. Select the updates you want to approve for installation.
-4. Right-click on the selected updates and choose "Approve".
-5. Select the target computer groups and approve the updates for them.
+3. Select the updates to be approved for installation.
+4. Right-click the selected updates and choose "Approve".
+5. Assign the updates to the appropriate computer groups.
 
-**Expected Output:**
-- Selected updates are approved for deployment to the specified computer groups.
+**Result:**
+- The selected updates are approved for deployment to designated device groups.
 
-### Exercise 4: Verifying Update Status on Client Machines
+### Task 4: Checking Update Status on Client Devices
 
 **Steps:**
 
-1. On a client machine, open Command Prompt as an administrator.
-2. Run the following command to force the client to check for updates:
+1. On a client machine, open Command Prompt with administrative privileges
+2. Execute the following command to trigger an update check:
     ```bash
     wuauclt /detectnow
     ```
-3. Open Windows Update from the Control Panel or Settings and check for updates.
-4. Verify that the updates approved in WSUS are listed and begin installing.
+3. Open Windows Update from the Control Panel or Settings and check for available updates.
+4. Confirm that the updates approved in WSUS are listed and begin installation.
 
-**Expected Output:**
-- The client machine detects and installs updates as configured by the WSUS server.
+**Result:**
+- The client machine detects and installs updates as configured by WSUS
 
-### Exercise 5: Generating and Analyzing WSUS Reports
+### Task 5: Generating and Reviewing WSUS Reports
 
 **Steps:**
 
-1. Open the WSUS console on your Windows Server.
-2. Navigate to "Reports" and select the desired report type (e.g., Update Status Summary).
-3. Configure the report parameters and generate the report.
-4. Analyze the report to review update compliance and identify any issues.
+1. Access the WSUS console on the server.
+2. Navigate to the "Reports" section and select the desired report type (e.g., Update Status Summary).
+3. Define the necessary parameters and generate the report.
+4. Analyze the report to assess update compliance and identify any issues.
 
-**Expected Output:**
-- A detailed report showing the update status and compliance of client machines, helping to identify any pending or failed updates.
+**Result:**
+- A detailed report providing insights into update status and compliance across client devices, helping to detect pending or failed updates.
 
-By completing these exercises, students will gain hands-on experience with WSUS for patch management and vulnerability remediation, including setting up the server, configuring clients, deploying updates, and analyzing update compliance.
+**Summary:**
+By completing these exercises, participants will gain hands-on experience in using WSUS for patch management and vulnerability remediation, including server configuration, client setup, update deployment, and compliance monitoring.
