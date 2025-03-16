@@ -87,5 +87,7 @@ This project focuses on learning the fundamentals of patch management and vulner
 **Result:**
 - A detailed report providing insights into update status and compliance across client devices, helping to detect pending or failed updates.
 
+
 **Summary:**
+
 By completing these exercises, participants will gain hands-on experience in using WSUS for patch management and vulnerability remediation, including server configuration, client setup, update deployment, and compliance monitoring.
